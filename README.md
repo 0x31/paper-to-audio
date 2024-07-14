@@ -19,15 +19,15 @@ https://github.com/user-attachments/assets/2cbb48ee-1a0c-4b5b-be72-cda1731e3d12
 
 Example of generated cover images:
 
-![paper-to-audio cover images](./preview-cover.jpg)
+![paper-to-audio cover images](./previews/preview-cover.jpg)
 
 Screenshot of CLI:
 
-![paper-to-audio CLI screenshot](./preview-cli.jpg)
+![paper-to-audio CLI screenshot](./previews/preview-cli.jpg)
 
 Example of chapters as seen in an [audiobook payer](https://github.com/advplyr/audiobookshelf):
 
-![paper-to-audio chapters screenshot](./preview-chapters.jpg)
+![paper-to-audio chapters screenshot](./previews/preview-chapters.jpg)
 
 ## Setup
 
