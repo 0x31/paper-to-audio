@@ -1,0 +1,23 @@
+# Runtime files
+/intermediate
+/data
+
+## NODE ##
+
+# Dependencies
+/node_modules
+*-debug.log*
+*-error.log*
+
+# Build files
+/build
+
+## MISC ##
+
+# Environment/Config
+*.env
+.env*.local
+.vscode
+
+# OS
+.DS_Store
