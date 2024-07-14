@@ -13,7 +13,7 @@ Features:
 
 ## Preview
 
-The following is a 30 second snippet generated from a PDF:
+The following is a 30 second snippet generated from a PDF (**enable audio in video controls**):
 
 https://github.com/user-attachments/assets/2cbb48ee-1a0c-4b5b-be72-cda1731e3d12
 
