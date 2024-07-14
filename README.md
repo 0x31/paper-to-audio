@@ -2,8 +2,6 @@
 
 Convert academic papers and PDFs to audio using [GROBID](https://github.com/kermitt2/grobid) and [OpenAI](https://openai.com)'s TTS API.
 
-![paper-to-audio preview](./preview.jpg)
-
 Features:
 
 -   Encodes chapter marks into MP3.
@@ -12,6 +10,20 @@ Features:
 
 > [!IMPORTANT]
 > Requires an OpenAI API key. A 10 page research paper will be ~30-60 minutes in length and cost $0.50 to $1 to generate.
+
+## Preview
+
+The following is a 30 second snippet generated from a PDF:
+
+![audio preview](./preview.mp4)
+
+Example of generated cover images:
+
+![paper-to-audio cover images](./preview-cover.jpg)
+
+Screenshot of CLI:
+
+![paper-to-audio CLI](./preview-cli.jpg)
 
 ## Setup
 
@@ -44,7 +56,7 @@ Data used for generating the file are stored in `./intermediate`, and will be re
 
 ## Optional configuration
 
-In addition to the OpenAI API key, the following environment variables can be set:
+Currently, parameters are configured using environment variables instead of CLI options. In addition to the OpenAI API key, the following environment variables can be set:
 
 ```sh
 GROBID_URL=http://localhost:8070 # defaults to https://kermitt2-grobid.hf.space
