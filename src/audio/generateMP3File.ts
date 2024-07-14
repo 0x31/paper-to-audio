@@ -35,7 +35,7 @@ const writeID3Tags = async (
     return finalBuffer;
 };
 
-// Re-encode and write audio to MP3 file.
+// Re-encode and write audio to MP3 file, using `libmp3lame` as the audio codec.
 const encodeMP3File = async (
     outputPath: string,
     buffer: Buffer,
@@ -78,6 +78,6 @@ export const generateMP3File = async (
     // Write ID3 metadata tags to buffer.
     const audioBufferWithTags = await writeID3Tags(audioBuffer, tags);
 
-    // Encode MP3 file.
+    // Re-encode the audio using FFMPEG, outputting an MP3 file.
     await encodeMP3File(outputFilepath, audioBufferWithTags);
 };

@@ -28,7 +28,7 @@ const {
 } = config().parsed ?? {};
 
 const main = async (...args: string[]) => {
-    ////////////////////////////////////////////////////////////////////////////
+    // SETUP ///////////////////////////////////////////////////////////////////
 
     const openai = new OpenAI({ apiKey: OPENAI_API_KEY });
 
@@ -69,6 +69,8 @@ const main = async (...args: string[]) => {
 
     // EXTRACT TEXT FROM PDF USING GROBID //////////////////////////////////////
 
+    // GROBID is "machine learning software for extracting information from
+    // scholarly documents".
     const { metadata, segments } = await extractSegments(
         intermediateDirectory,
         openai,
@@ -82,8 +84,11 @@ const main = async (...args: string[]) => {
         },
     );
 
-    // PARSE KEYWORDS //////////////////////////////////////////////////////////
+    // GENERATE FALLBACK TITLE //////////////////////////////////////////////////
 
+    // If a title couldn't be extracted, generate a title from a snippet of the
+    // extracted text content. Using the PDF's filename would be an alternate
+    // approach.
     if (
         (!metadata.title || metadata.title.length === 0) &&
         !metadata.fallbackTitle
@@ -101,6 +106,7 @@ const main = async (...args: string[]) => {
 
     // PARSE KEYWORDS //////////////////////////////////////////////////////////
 
+    // Standardize the keywords/tags returned from GROBID using an LLM.
     if (!metadata.tags || metadata.tags.length === 0) {
         metadata.tags = await generateTags(openai, LLM_MODEL, metadata);
 
@@ -110,6 +116,9 @@ const main = async (...args: string[]) => {
 
     // GENERATE COVER IMAGE USING DALL-E ///////////////////////////////////////
 
+    // Several options are generated using different prompt formats, allowing
+    // the user to select the most suitable image. The image will be embedded
+    // into the generated MP3 file.
     if (!metadata.image) {
         metadata.imageModel = IMAGE_MODEL ?? metadata.imageModel;
         metadata.image = await generateCoverImage(

@@ -25,7 +25,7 @@ Screenshot of CLI:
 
 ![paper-to-audio CLI screenshot](./previews/preview-cli.jpg)
 
-Example of chapters as seen in an [audiobook payer](https://github.com/advplyr/audiobookshelf):
+Example of chapters as seen in an [audiobook player](https://github.com/advplyr/audiobookshelf):
 
 ![paper-to-audio chapters screenshot](./previews/preview-chapters.jpg)
 
@@ -34,7 +34,8 @@ Example of chapters as seen in an [audiobook payer](https://github.com/advplyr/a
 Requirements:
 
 1. NodeJS (tested with v21) and Yarn v1 installed
-2. OpenAI API key
+2. [`ffmpeg`](https://ffmpeg.org/) installed, with `libmp3lame` enabled
+3. OpenAI API key
 
 Create a `.env` with your OpenAI key:
 
