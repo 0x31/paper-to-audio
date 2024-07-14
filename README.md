@@ -15,7 +15,7 @@ Features:
 
 The following is a 30 second snippet generated from a PDF:
 
-![audio preview](./preview.mp4)
+https://github.com/user-attachments/assets/2cbb48ee-1a0c-4b5b-be72-cda1731e3d12
 
 Example of generated cover images:
 
