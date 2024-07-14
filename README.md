@@ -23,7 +23,11 @@ Example of generated cover images:
 
 Screenshot of CLI:
 
-![paper-to-audio CLI](./preview-cli.jpg)
+![paper-to-audio CLI screenshot](./preview-cli.jpg)
+
+Example of chapters as seen in an [audiobook payer](https://github.com/advplyr/audiobookshelf):
+
+![paper-to-audio chapters screenshot](./preview-chapters.jpg)
 
 ## Setup
 
@@ -56,7 +60,7 @@ Data used for generating the file are stored in `./intermediate`, and will be re
 
 ## Optional configuration
 
-Currently, parameters are configured using environment variables instead of CLI options. In addition to the OpenAI API key, the following environment variables can be set:
+Currently, parameters are configured using environment variables instead of command-line parameters. In addition to the OpenAI API key, the following environment variables can be set:
 
 ```sh
 GROBID_URL=http://localhost:8070 # defaults to https://kermitt2-grobid.hf.space
